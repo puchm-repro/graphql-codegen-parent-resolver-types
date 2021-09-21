@@ -1,0 +1,12 @@
+extend type Query {
+    gender: User!
+}
+
+type User {
+    gender: Gender
+}
+
+enum Gender {
+    MALE
+    FEMALE
+}

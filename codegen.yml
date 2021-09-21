@@ -1,0 +1,12 @@
+schema:
+  - schema.graphql
+generates:
+  types.ts:
+    federation: true
+    noSchemaStitching: true
+    plugins:
+      - typescript
+      - typescript-resolvers
+    config:
+      mappers:
+        Gender: gender#TwoFactorMethod
