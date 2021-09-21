@@ -1,5 +1,5 @@
 import { GraphQLResolveInfo } from 'graphql';
-import { TwoFactorMethod } from 'gender';
+import { OtherGender } from './gender';
 export type Maybe<T> = T | null;
 export type Exact<T extends { [key: string]: unknown }> = { [K in keyof T]: T[K] };
 export type MakeOptional<T, K extends keyof T> = Omit<T, K> & { [SubKey in K]?: Maybe<T[SubKey]> };
@@ -100,7 +100,7 @@ export type DirectiveResolverFn<TResult = {}, TParent = {}, TContext = {}, TArgs
 /** Mapping between all available schema types and the resolvers types */
 export type ResolversTypes = {
   Boolean: ResolverTypeWrapper<Scalars['Boolean']>;
-  Gender: ResolverTypeWrapper<TwoFactorMethod>;
+  Gender: ResolverTypeWrapper<OtherGender>;
   Query: ResolverTypeWrapper<{}>;
   String: ResolverTypeWrapper<Scalars['String']>;
   User: ResolverTypeWrapper<Omit<User, 'gender'> & { gender?: Maybe<ResolversTypes['Gender']> }>;

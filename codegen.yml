@@ -9,4 +9,4 @@ generates:
       - typescript-resolvers
     config:
       mappers:
-        Gender: gender#TwoFactorMethod
+        Gender: ./gender#OtherGender
